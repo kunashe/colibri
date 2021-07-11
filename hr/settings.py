@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import mongoengine
+import os, mongoengine
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'hr.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, os.path.join(BASE_DIR,'hr','templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -153,7 +153,7 @@ REST_FRAMEWORK = {
 mongoengine.connect(
     host="localhost",
     db="hr",
-    username="ku",
-    password="D0b3rm4n_32",
+    username="colibri",
+    password=os.getenv("colibri_mongo"),
     authentication_source="admin"
 )
