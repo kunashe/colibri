@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import mongoengine
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework_mongoengine',
+    'mongoengine',
     'hr',
 ]
 
@@ -79,6 +82,22 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+MONGODB_DATABASES = {
+    "default": {
+        "name": "hr",
+        "host": "localhost",
+        "port": 27017,
+        "tz_aware": True,  # if you use timezones in django (USE_TZ = True)
+    },
+
+    "test": {
+        "name": "hr",
+        "host": "localhost",
+        "port": 27017,
+        "tz_aware": True,  # if you use timezones in django (USE_TZ = True)
     }
 }
 
@@ -130,3 +149,11 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
+
+mongoengine.connect(
+    host="localhost",
+    db="hr",
+    username="ku",
+    password="D0b3rm4n_32",
+    authentication_source="admin"
+)

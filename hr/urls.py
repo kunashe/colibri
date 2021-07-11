@@ -3,7 +3,7 @@ from rest_framework import routers
 from hr.people import views
 
 router = routers.DefaultRouter()
-router.register(r'people', views.PersonViewSet)
+router.register(r'people', views.PersonViewSet,basename='People')
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

@@ -1,11 +1,13 @@
-from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from .models import Person
+from rest_framework_mongoengine import serializers as mongoserializers
+from .models import People
 
 
-class PersonSerializer(serializers.HyperlinkedModelSerializer):
+class PersonSerializer(mongoserializers.DocumentSerializer):
+    
     class Meta:
-        model = Person
-        fields = ['first_name','last_name', 'email', 'date_of_birth', 'industry', 'salary','years_of_experience']
+        model = People
+        fields = '__all__'
+        
 
 

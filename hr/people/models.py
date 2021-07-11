@@ -1,13 +1,14 @@
-from django.db import models
+from mongoengine import Document
+from mongoengine.base.fields import ObjectIdField
+from mongoengine.fields import DateField, FloatField, IntField, StringField
 
-class Person(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    email = models.CharField(max_length=50)
-    date_of_birth = models.CharField(max_length=50)
-    industry = models.CharField(max_length=50)
-    salary = models.CharField(max_length=50)
-    years_of_experience = models.CharField(max_length=50)
-    
-    def __str__(self):
-        return self.name
+class People(Document):
+    _id = ObjectIdField()
+    id = IntField()
+    first_name = StringField()
+    last_name = StringField()
+    email = StringField()
+    date_of_birth = DateField()
+    industry = StringField()
+    salary = FloatField()
+    years_of_experience = FloatField()
