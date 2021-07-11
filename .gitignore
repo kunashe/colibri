@@ -3,3 +3,4 @@ Resources/
 diagnostics.py
 .vscode/
 colibri/
+hr/__pycache__
