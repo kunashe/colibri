@@ -3,7 +3,7 @@ from mongoengine.base.fields import ObjectIdField
 from mongoengine.fields import FloatField, IntField, StringField
 
 class People(Document):
-    _id = ObjectIdField()
+    _id = ObjectIdField(validation=None)
     id = IntField()
     first_name = StringField()
     last_name = StringField()

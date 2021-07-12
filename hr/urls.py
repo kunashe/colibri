@@ -4,10 +4,9 @@ from hr import people
 from hr.people import views
 
 router = routers.DefaultRouter()
-router.register(r'people', views.PeopleViewSet,basename='People')
+router.register(r'people', views.PeopleViewSet,basename='people')
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('update-person/<str:id>/',views.UpdatePerson.as_view(),name="update_person"),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
