@@ -1,6 +1,6 @@
 from mongoengine import Document
 from mongoengine.base.fields import ObjectIdField
-from mongoengine.fields import DateField, FloatField, IntField, StringField
+from mongoengine.fields import FloatField, IntField, StringField
 
 class People(Document):
     _id = ObjectIdField()

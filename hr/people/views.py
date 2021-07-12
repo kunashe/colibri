@@ -15,18 +15,16 @@ class PeopleViewSet(MongoModelViewSet):
     def get_queryset(self):
         
         return People.objects.all()
+        
+class UpdatePerson(MongoModelViewSet):
 
-#---update person 
+    lookup_field = 'id'
+    serializer_class = PeopleSerializer
 
-@api_view(['GET'])
-def update_person(request,id):
+    def get_queryset(self):
+        
+        return People.objects().all()
 
-    person = People.objects(id=id)
-    
-    serilaizer = PeopleSerializer(instance=person,data=request.data)
 
-    if serilaizer.is_valid():
-        print(request)
-    return Response(serilaizer.data)
 
 

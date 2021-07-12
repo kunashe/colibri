@@ -4,3 +4,4 @@ diagnostics.py
 .vscode/
 colibri/
 hr/__pycache__
+hr/people/__pycache__

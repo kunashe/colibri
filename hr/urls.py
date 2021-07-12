@@ -8,6 +8,6 @@ router.register(r'people', views.PeopleViewSet,basename='People')
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('update-person/<str:id>/',views.update_person,name="update_person"),
+    path('update-person/<str:id>/',views.UpdatePerson.as_view(),name="update_person"),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-    ]
+]
