@@ -9,5 +9,5 @@ class PeopleSerializer(mongoserializers.DocumentSerializer):
     class Meta:
         model = People
         fields = '__all__'
-        #fields = ["id","first_name","last_name","email","date_of_birth","industry","salary","years_of_experience"]
+        #fields = ["_id","id","first_name","last_name","email","date_of_birth","industry","salary","years_of_experience"]
         

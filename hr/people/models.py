@@ -4,7 +4,7 @@ from mongoengine.fields import FloatField, IntField, StringField
 
 class People(Document):
     _id = ObjectIdField(validation=None)
-    id = IntField()
+    id = IntField(unique=True)
     first_name = StringField()
     last_name = StringField()
     email = StringField()
