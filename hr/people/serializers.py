@@ -1,13 +1,9 @@
-from rest_framework import serializers
-from rest_framework_mongoengine import serializers as mongoserializers
+from rest_framework_mongoengine.serializers import DocumentSerializer
 from .models import People
 
-from rest_meets_djongo.serializers import DjongoModelSerializer
-
-class PeopleSerializer(mongoserializers.DocumentSerializer):
+class PeopleSerializer(DocumentSerializer):
     
     class Meta:
         model = People
         fields = '__all__'
-        #fields = ["_id","id","first_name","last_name","email","date_of_birth","industry","salary","years_of_experience"]
         

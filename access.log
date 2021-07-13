@@ -1,0 +1,17 @@
+INFO:human_api:--getting single person
+ERROR:human_api:64 | 'id'
+WARNING:django.request:Method Not Allowed: /people/update-one/
+WARNING:django.request:Method Not Allowed: /people/update-one/
+WARNING:django.request:Method Not Allowed: /people/update-one/
+WARNING:django.request:Method Not Allowed: /people/update-one/
+WARNING:django.request:Method Not Allowed: /people/update-one/
+WARNING:django.request:Method Not Allowed: /people/update-one/
+WARNING:django.request:Method Not Allowed: /people/update-one/
+WARNING:django.request:Method Not Allowed: /people/delete-one/
+WARNING:django.request:Method Not Allowed: /people/delete-one/
+ERROR:human_api:113 | 'id'
+WARNING:django.request:Method Not Allowed: /people/delete-one/
+WARNING:django.request:Method Not Allowed: /people/delete-one/
+WARNING:django.request:Method Not Allowed: /people/delete-one/
+WARNING:django.request:Method Not Allowed: /people/delete-one/
+WARNING:django.request:Method Not Allowed: /people/delete-one/
