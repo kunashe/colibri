@@ -5,3 +5,4 @@ diagnostics.py
 colibri/
 hr/__pycache__
 hr/people/__pycache__
+db.sqlite3

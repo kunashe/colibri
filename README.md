@@ -1,4 +1,4 @@
-# People API
+# Human API
 
 Browsable API for the exploration HR records  
 Scope: read, update, delete records
