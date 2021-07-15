@@ -5,6 +5,7 @@ from hr.people import views
 
 router = routers.DefaultRouter()
 router.register(r'people', views.PeopleViewSet,basename='people')
+router.register(r'stats', views.StatsViewSet,basename='stats')
 
 urlpatterns = [
     path('', include(router.urls)),
