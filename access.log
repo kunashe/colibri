@@ -169,3 +169,8 @@ WARNING:django.request:Not Found: /stats/avg-age-industry/
 WARNING:django.request:Not Found: /people/fetch-one/28
 WARNING:django.request:Not Found: /favicon.ico
 ERROR:human_api:87 | Expecting value: line 1 column 1 (char 0)
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: 'colibri.data-ai.com'. You may need to add 'colibri.data-ai.com' to ALLOWED_HOSTS.
+WARNING:django.request:Bad Request: /people/fetch-one/
+WARNING:django.request:Not Found: /people/static/rest_framework/css/bootstrap.min.css
+ERROR:human_api:231 | 'id'

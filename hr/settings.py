@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-y5926alfai)!qg7a@n@!-b)t&aee%r3-=!p4prxw_yp@u0q4qe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["colibri.data-ai.com","localhost","127.0.0.1"]
 
 
 # Application definition
